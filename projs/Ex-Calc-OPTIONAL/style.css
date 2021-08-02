@@ -1,0 +1,83 @@
+table {
+  border-spacing: 5px;
+  position: absolute;
+  background-color: #483d8b;
+  border: solid rgb(90, 90, 90) 3px;
+  margin-left: 38%;
+  margin-right: 25%;
+  margin-top: 8%;
+  box-shadow: 1px 1px 1px #fff, 1px 1px 10px #ccc;
+  height: 60%;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: rgb(241, 224, 255);
+}
+
+body {
+  text-align: center;
+  background-color: rgb(63, 63, 63);
+}
+
+button {
+  background-color: #e4e4e4;
+  border-radius: 30px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  transition: 0.3s;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+input[type='text'] {
+  background-color: rgb(182, 205, 255);
+  width: 95%;
+  height: 100px;
+  font-size: 30px;
+}
+
+h1 {
+  color: aliceblue;
+  background-color: #483d8b;
+  text-shadow: 1px 1px 1px #fff, 1px 1px 10px #ccc;
+  font-size: 50px;
+  text-align: center;
+}
+
+.modal {
+  background-color: rgb(3, 2, 99);
+  box-shadow: 1px 1px 1px rgb(78, 78, 78), 1px 1px 10px rgb(32, 32, 32);
+  display: none;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  width: 100px;
+  margin-left: 50%;
+  margin-top: 23%;
+  border-radius: 12px;
+}
+
+.modal button {
+  float: right;
+}
+.modal button {
+  background-color: #71aaff;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+  font-size: 10px;
+}
+
+.modal h3 {
+  font-size: 23px;
+  color: rgb(209, 181, 255);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  color: white;
+}

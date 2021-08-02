@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>books</title>
+</head>
+
+<body onload="onInit()">
+  <span class="header">
+    <img src="img/b.png">
+    <h1> Books Shop </h1>
+
+
+
+  </span>
+  <div class="sort-btns">
+    <h4 id="sort-txt">sort by:</h4>
+    <button name="name" class="sort-btn" onclick="onSetSort(this)" type="button">Book's Name</button>
+    <button name="high to low" class="sort-btn" onclick="onSetSort(this)" type="button">Price:high to low</button>
+    <button name="low to high" class="sort-btn" onclick="onSetSort(this)" type="button">Price:low to high</button>
+    <button name="rate" class="sort-btn" onclick="onSetSort(this)" type="button">rate</button>
+
+
+    <button class="create-btn" onclick="onAddBook()" type="button">create a new book</button>
+  </div>
+
+  <table class="books-table">
+    <thead>
+      <tr>
+        <td>rate</td>
+        <td>title</td>
+        <td>price</td>
+        <td colspan=3>Action</td>
+        <td>book view: </td>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="container xlarge">
+    <div class="pagination">
+      <ul>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" hidden>
+    <h3>Book deatiles:</h2>
+      <hr>
+      <div class="img-container"></div>
+      <h5></h5>
+      <h4></h4>
+      <p></p>
+
+
+      <div class="rate-conroller">
+
+      </div>
+
+
+      <button id="close" onclick="onCloseModal()">Close</button>
+  </div>
+
+  <div class="input-modal" hidden>
+
+    <h3>Enter the book's deatiles</h3>
+    <hr>
+    <h4>Title of the book:</h4>
+    <input name="title-input" placeholder="enter the title">
+    <h4>URL of the book:</h4>
+    <input name="img-input" placeholder="enter the image URL">
+    <h4>price of the book:</h4>
+    <input name="price-input" placeholder="enter the price">
+
+    <button id="confirm" onclick="inputConfirm()">Confirm</button>
+
+    <button id="close" onclick="onCloseInputModal()">Close</button>
+
+  </div>
+
+  <script src="js/utils.service.js"></script>
+  <script src="js/storage.service.js"></script>
+  <script src="js/books.service.js"></script>
+  <script src="js/controller.js"></script>
+</body>
+
+</html>

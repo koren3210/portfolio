@@ -1,0 +1,51 @@
+body {
+  background-color: black;
+  color: white;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.modal {
+  background-color: rgb(117, 115, 255);
+  box-shadow: 1px 1px 1px rgb(78, 78, 78), 1px 1px 10px rgb(32, 32, 32);
+  display: none;
+  position: absolute;
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+  margin-right: 50%;
+  margin-top: 50%;
+  border-radius: 12px;
+  font-size: larger;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+h1 {
+  color: aliceblue;
+  background-color: #483d8b;
+  text-shadow: 1px 1px 1px #fff, 1px 1px 10px #ccc;
+  font-size: 50px;
+  text-align: center;
+}
+
+.modal button {
+  padding: 10px;
+  margin: auto;
+  background-color: beige;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  box-shadow: hsl(248, 100%, 78%);
+}

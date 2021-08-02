@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>mine-sweepers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initGame()">
+
+  <h1>Mine-Sweepers💣</h1>
+
+  <div class="score-board" onmouseover="openModal()">
+    <div id="user-label" class="badge" onmouseover="openModal()">Wins</div>
+    <div id="computer-label" class="badge" onmouseover="openModal()">score</div>
+    <span id="user-score">0</span>
+  </div>
+
+  <div class="level" id="demo">
+    <label>
+      <input id="1" type="radio" data-level="easy" onclick="initGame(this,4)" name="radio"> Easy(4x4)
+      <input id="2" type="radio" data-level="hard" onclick="initGame(this,8)" name="radio" checked> Hard(8x8)
+      <input id="3" type="radio" data-level="extreme" onclick="initGame(this,12)" name="radio"> Extreme(12x12)
+    </label>
+  </div>
+
+  <div class="pulse">
+    <label id="pulsingheart1">💚</label>
+    </label>
+    <label>
+      <label id="pulsingheart2">💚</labels>
+      </label>
+      <label>
+        <label id="pulsingheart3">💚</label>
+      </label>
+  </div>
+
+  <div id="display">
+    00:00:00
+  </div>
+
+  <div class="safe-clicks-count">remaining clicks: 3</div>
+
+  <label class="game-options">
+    <label type="button" onclick="activateSafeClick(this)" class="safe-click">Safe click</label>
+
+    <label class="manual-warpper" onclick="manualBomb(this)">
+      Manual
+      <label class="manual">💣</label>
+
+
+
+    </label>
+    <label class="emoji">😎</label>
+    <div class="warrper">
+
+      <label class="hints" onclick="renderHint(this)"><img src="hint.png"></label>
+      <label class="hints" onclick="renderHint(this)"><img src="hint.png"></label>
+      <label class="hints" onclick="renderHint(this)"><img src="hint.png"></label>
+
+
+    </div>
+    <label type="button" class="undo">undo</label>
+
+  </label>
+
+
+
+  <div class="modal">
+    <h2>Best Record list:</h2>
+    <p></p>
+
+
+    <button onclick="closeModal()">x</button>
+  </div>
+
+
+
+
+
+
+
+  <div class="board-container"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/util.js"></script>
+</body>
+
+</html>
