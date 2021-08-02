@@ -23,24 +23,36 @@ function _createProjs() {
   var projs;
   projs = loadFromStorage(KEY)
   console.log(projs);
-
-  projs = []
-  projs.push(_createProj(
-    'book-proj',
-    'book-store',
-    'online store',
-    makeLorem(),
-    "projs/ex-book-shop/book.png",
-    timeStamp()
-  ))
-  projs.push(_createProj(
-    'mine-proj',
-    'mine sweepers',
-    'Web game',
-    makeLorem(),
-    'projs/mine/koren-minesweeper/mine.png',
-    timeStamp()
-  ))
+  if (!projs || !projs.length) {
+    projs = []
+    projs.push(_createProj(
+      'book-proj',
+      'book-store',
+      'online store',
+      makeLorem(),
+      "projs/ex-book-shop/book.png",
+      timeStamp()
+    ))
+    projs.push(_createProj(
+      'mine-proj',
+      'mine sweepers',
+      'Web game',
+      makeLorem(),
+      'projs/mine/koren-minesweeper/mine.png',
+      timeStamp()
+    ))
+    projs.push(_createProj(
+      'calc-proj',
+      'Calculator',
+      'Web calculator',
+      makeLorem(),
+      'projs/calc-proj/calc.png',
+      timeStamp()
+    ))
+    gProjs = projs;
+    _saveProjsToStorage();
+    return
+  }
   gProjs = projs;
   _saveProjsToStorage();
 }
