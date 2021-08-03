@@ -2,6 +2,7 @@
 
 var gProjs;
 const KEY = 'porjDB'
+const CONTACT = 'contactDB'
 
 _createProjs()
 
@@ -30,7 +31,7 @@ function _createProjs() {
       'book-store',
       'online store',
       makeLorem(),
-      "projs/ex-book-shop/book.png",
+      'img/book.png',
       timeStamp()
     ))
     projs.push(_createProj(
@@ -39,14 +40,6 @@ function _createProjs() {
       'Web game',
       makeLorem(),
       'projs/mine/koren-minesweeper/mine.png',
-      timeStamp()
-    ))
-    projs.push(_createProj(
-      'calc-proj',
-      'Calculator',
-      'Web calculator',
-      makeLorem(),
-      'projs/calc-proj/calc.png',
       timeStamp()
     ))
     gProjs = projs;
@@ -69,3 +62,4 @@ function getProjs() {
 function timeStamp() {
   return Date.now()
 }
+
