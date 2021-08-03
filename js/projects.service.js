@@ -8,7 +8,7 @@ const CONTACT = 'contactDB'
 _createProjs()
 
 
-function _createProj(id, name, title, desc, url, publishedAt, labels) {
+function _createProj(id, name, title, desc, url, publishedAt, link) {
   return {
     id: id,
     name: name,
@@ -16,7 +16,7 @@ function _createProj(id, name, title, desc, url, publishedAt, labels) {
     desc: desc,
     url: url,
     publishedAt: publishedAt,
-    labels: labels,
+    link: link,
   }
 }
 
@@ -41,7 +41,8 @@ function _createProjs() {
       'Web game',
       makeLorem(),
       'projs/mine/koren-minesweeper/mine.png',
-      timeStamp()
+      timeStamp(),
+      `https://koren3210.github.io/final-koren-mines/`
     ))
     projs.push(_createProj(
       'calc-proj',
@@ -49,7 +50,8 @@ function _createProjs() {
       'Web calculator',
       makeLorem(),
       'img/calc.png',
-      timeStamp()
+      timeStamp(),
+      `https://koren3210.github.io/calc-/`
     ))
     projs.push(_createProj(
       'picture-proj',

@@ -49,9 +49,9 @@ function renderProtfolioModals() {
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2><a herf="${proj.link}">${proj.name}</a> </h2>
+                <h2>${proj.name}</h2>
                 <p class="item-intro text-muted">${proj.title}</p>
-                <img class="img-fluid d-block mx-auto" src="${proj.url}" alt="">
+                <a href="${proj.link}"><img class="img-fluid d-block mx-auto" src="${proj.url}" alt=""></a>
                 <p>${proj.desc}</p>
                 <ul class="list-inline">
                   <li>Date: ${proj.publishedAt}</li>
