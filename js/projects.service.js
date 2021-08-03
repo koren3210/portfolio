@@ -1,6 +1,7 @@
 'use strict'
 
 var gProjs;
+var gContacts = [];
 const KEY = 'porjDB'
 const CONTACT = 'contactDB'
 
@@ -42,6 +43,38 @@ function _createProjs() {
       'projs/mine/koren-minesweeper/mine.png',
       timeStamp()
     ))
+    projs.push(_createProj(
+      'calc-proj',
+      'calculator',
+      'Web calculator',
+      makeLorem(),
+      'img/calc.png',
+      timeStamp()
+    ))
+    projs.push(_createProj(
+      'picture-proj',
+      `what in the pic`,
+      'pictures game',
+      makeLorem(),
+      'img/pic.png',
+      timeStamp()
+    ))
+    projs.push(_createProj(
+      'pacman-proj',
+      `PacMan`,
+      'pacman game',
+      makeLorem(),
+      'img/pacman.png',
+      timeStamp()
+    ))
+    projs.push(_createProj(
+      'guess-proj',
+      `guess who?`,
+      'web game',
+      makeLorem(),
+      'img/guess.png',
+      timeStamp()
+    ))
     gProjs = projs;
     _saveProjsToStorage();
     return
@@ -63,3 +96,12 @@ function timeStamp() {
   return Date.now()
 }
 
+function contactStorage(phoneNum, email, messege) {
+  var contact = {
+    phone: phoneNum,
+    email: email,
+    messege: messege
+  }
+  gContacts.push(contact)
+  saveToStorage(CONTACT, gContacts)
+}

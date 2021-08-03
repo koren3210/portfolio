@@ -1,7 +1,7 @@
 'use strict'
 
 $(onInit)
-$('#contact-form').submit(onSumbit)
+
 
 
 function onInit() {
@@ -49,7 +49,7 @@ function renderProtfolioModals() {
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2>${proj.name}</h2>
+                <h2><a herf="${proj.link}">${proj.name}</a> </h2>
                 <p class="item-intro text-muted">${proj.title}</p>
                 <img class="img-fluid d-block mx-auto" src="${proj.url}" alt="">
                 <p>${proj.desc}</p>
@@ -73,11 +73,11 @@ function renderProtfolioModals() {
   $('.modals-container').html(strHtmls)
 }
 
-function onSumbit() {
-  console.log('hello');
-  var phoneNum = $('[name="number"]').value
-  var email = $('[name="email"]').value
-  var messege = $('[name="msg"]').value
+function onSubmit() {
+  var phoneNum = document.querySelector('#number').value
+  var email = document.querySelector('#email').value
+  var messege = document.querySelector('#msg').value
 
   console.log('phone num ' + phoneNum + ' email ' + email + ' messge ' + messege);
+  contactStorage(phoneNum, email, messege)
 }

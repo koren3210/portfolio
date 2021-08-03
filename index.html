@@ -40,7 +40,7 @@
 
           <!--Form with header-->
 
-          <form id="contact-form">
+          <form onsubmit="onSubmit()" id="contact-form">
             <div class="card border-primary rounded-0">
               <div class="card-header p-0">
                 <div class="bg-info text-white text-center py-2">
@@ -56,7 +56,7 @@
                     <div class="input-group-prepend">
                       <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
                     </div>
-                    <input type="text" class="form-control" id="number" name="number"
+                    <input type="text" id="number" class="form-control" name="number"
                       placeholder="enter your phone number" required>
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="input-group-prepend">
                       <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
                     </div>
-                    <input type="email" class="form-control" id="number" name="email" placeholder="example@gmail.com"
+                    <input type="email" id="email" class="form-control" name="email" placeholder="example@gmail.com"
                       required>
                   </div>
                 </div>
@@ -75,7 +75,8 @@
                     <div class="input-group-prepend">
                       <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                     </div>
-                    <textarea name="msg" class="form-control" placeholder="enter the messege here" required></textarea>
+                    <textarea id="msg" name="msg" class="form-control" placeholder="enter the messege here"
+                      required></textarea>
                   </div>
                 </div>
 
